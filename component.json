@@ -1,0 +1,16 @@
+{
+  "name": "events",
+  "repo": "component/events",
+  "description": "Higher level dom event management",
+  "version": "0.0.1",
+  "keywords": [],
+  "dependencies": {
+    "component/event": "*",
+    "component/event-manager": "*"
+  },
+  "development": {},
+  "license": "MIT",
+  "scripts": [
+    "index.js"
+  ]
+}

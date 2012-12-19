@@ -1,0 +1,27 @@
+
+<button>Click me</button>
+
+<script src="build/build.js"></script>
+
+<script>
+  var events = require('events');
+  var el = document.querySelector('button');
+
+  var view = new ButtonView(el);
+
+  function ButtonView(el) {
+    this.events = events(el, this);
+    this.events.bind('click');
+    this.events.bind('dblclick');
+  }
+
+  ButtonView.prototype.onclick = function(e){
+    console.log('click');
+    console.log(e.target);
+  };
+
+  ButtonView.prototype.ondblclick = function(e){
+    console.log('double click');
+    console.log(e.target);
+  };
+</script>
