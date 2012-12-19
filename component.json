@@ -3,7 +3,7 @@
   "repo": "component/events",
   "description": "Higher level dom event management",
   "version": "0.0.1",
-  "keywords": [],
+  "keywords": ["event", "events", "subscriptions"],
   "dependencies": {
     "component/event": "*",
     "component/event-manager": "*"
