@@ -18,7 +18,7 @@ module.exports = function(target, obj){
   });
 
   manager.onunbind(function(name, fn){
-    event.bind(untarget, name, fn);
+    event.bind(target, name, fn);
   });
 
   return manager;
