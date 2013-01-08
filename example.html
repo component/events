@@ -22,4 +22,9 @@
   ButtonView.prototype.ondblclick = function(e){
     console.log('double click');
   };
+
+  setTimeout(function(){
+    console.log('unbind');
+    view.events.unbind();
+  }, 3000);
 </script>
