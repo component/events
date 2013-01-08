@@ -1,5 +1,5 @@
 {
-  "name": "events-component",
+  "name": "events",
   "version": "1.0.1",
   "dependencies": {
     "event-component": "*",
