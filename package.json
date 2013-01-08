@@ -1,0 +1,13 @@
+{
+  "name": "events-component",
+  "version": "1.0.1",
+  "dependencies": {
+    "event-component": "*",
+    "event-manager": "*"
+  },
+  "component": {
+    "scripts": {
+      "events/index.js": "index.js"
+    }
+  }
+}
