@@ -2,8 +2,8 @@
   "name": "events-component-2",
   "version": "1.0.2",
   "dependencies": {
-    "event-component": "*",
-    "event-manager": "*"
+    "event-component": "0.1.0",
+    "event-manager": "1.0.0"
   },
   "component": {
     "scripts": {
