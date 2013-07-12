@@ -1,0 +1,45 @@
+<html>
+<head>
+  <title>Events</title>
+  <style>
+    body {
+      padding: 150px;
+    }
+    ul li {
+      padding: 5px;
+    }
+  </style>
+</head>
+<body>
+  <ul>
+    <li><a href="#">One</a></li>
+    <li><a href="#">Two</a></li>
+    <li><a href="#">Three</a></li>
+  </ul>
+  <button onclick="unbind()">Unbind</button>
+  <script src="../build/build.js"></script>
+  <script>
+    var Events = require('events');
+    var ul = document.querySelector('ul');
+
+    var events = Events(ul, {
+      onclick: function(e){
+        alert('clicked ' + e.target.textContent)
+      },
+
+      first: function(e){
+        alert('clicked the first');
+      }
+    });
+
+    events.bind('click li > a');
+    events.bind('click li:first-child > a', 'first');
+
+    function unbind() {
+      events.unbind('click', 'onclick');
+      // events.unbind('click');
+      // events.unbind();
+    }
+  </script>
+</body>
+</html>

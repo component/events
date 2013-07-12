@@ -1,0 +1,26 @@
+<html>
+<head>
+  <title>Events</title>
+</head>
+<body>
+  <button>Click me</button>
+  <button onclick="unbind()">Unbind</button>
+  <script src="../build/build.js"></script>
+  <script>
+    var Events = require('events');
+    var button = document.querySelector('button');
+
+    var events = Events(button, {
+      remove: function(){
+        alert('removed')
+      }
+    });
+
+    events.bind('click', 'remove');
+
+    function unbind() {
+      events.unbind();
+    }
+  </script>
+</body>
+</html>
