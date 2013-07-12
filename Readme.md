@@ -94,6 +94,19 @@ events.bind('click .sort-asc', 'sort', 'asc')
 events.bind('click .sort-dsc', 'sort', 'dsc')
 ```
 
+### Events.unbind([event], [method])
+
+  There are three flavours of unbinding -- you may unbind _all_
+  event handlers, all specific to `event`, or all specific to
+  `event` and the given `method`. For example these are all valid:
+
+```js
+events.unbind('click', 'remove')
+events.unbind('click', 'hide')
+events.unbind('click')
+events.unbind()
+```
+
 ## License
 
   MIT
