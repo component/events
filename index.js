@@ -24,6 +24,8 @@ module.exports = Events;
 
 function Events(el, obj) {
   if (!(this instanceof Events)) return new Events(el, obj);
+  if (!el) throw new Error('element required');
+  if (!obj) throw new Error('object required');
   this.el = el;
   this.obj = obj;
   this._events = {};

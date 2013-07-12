@@ -40,6 +40,59 @@ UserView.prototype.destroy = function(){
 };
 ```
 
+## API
+
+### Events(el, obj)
+
+  Initialize a new events manager targetting the
+  given element. Methods are delegated to `obj`.
+
+### Events#bind(event, [method])
+
+  Bind direct event handlers or delegates with `event` and
+  invoke `method` when the event occurs, passing the event object.
+  When `method` is not defined the `event` name prefixed with "on" is used.
+
+  For example the following will invoke `onmousedown`, `onmousemove`,
+  and `onmouseup`:
+
+```js
+events.bind('mousedown')
+events.bind('mousemove')
+events.bind('mouseup')
+```
+
+  Alternatively you may specify the `method` name:
+
+```js
+events.bind('click', 'toggleDisplay')
+```
+
+  To use event delegation simply pass a selector after the
+  event name as shown here:
+
+```js
+events.bind('click .remove', 'remove')
+events.bind('click .close', 'hide')
+```
+
+  You may bind to the same element with several events if necessary,
+  for example here perhaps `.remove()` does not manually invoke `.hide()`:
+
+```js
+events.bind('click .remove', 'remove')
+events.bind('click .remove', 'hide')
+events.bind('click .close', 'hide')
+```
+
+  Addition arguments are passed to the callee, which
+  is helpful for slight variations of a method, for
+  example sorting:
+
+```js
+events.bind('click .sort-asc', 'sort', 'asc')
+events.bind('click .sort-dsc', 'sort', 'dsc')
+```
 
 ## License
 
