@@ -1,7 +1,11 @@
 
 # events
 
-  Higher level dom event management based on [EventManager](https://github.com/component/event-manager).
+  Higher level dom event management with direct and delegate event handling support.
+
+  This component makes subscription management easy and unobtrusive since it does not muck with your view prototypes. Unbinding to "clean up" after your view is as simple as invoking `this.events.unbind()`, or more specific unbinds may be performed.
+
+  It's design to work with a "host" object, typically a view, that provides callbacks, making callback management much less tedious than libraries like jQuery.
 
 ## Installation
 
@@ -11,28 +15,31 @@
 
 ```js
 var events = require('events');
-var el = document.querySelector('button');
+var el = document.querySelector('.user');
 
-var view = new ButtonView(el);
+var view = new UserView(el);
 
-function ButtonView(el) {
+function UserView(el) {
   this.events = events(el, this);
-  this.events.bind('click');
-  this.events.bind('dblclick');
+  this.events.bind('click .remove', 'remove');
+  this.events.bind('click .hide', 'hide');
 }
 
-ButtonView.prototype.onclick = function(e){
-  console.log('click');
+UserView.prototype.remove = function(){
+  // remove the user
+  this.hide();
 };
 
-ButtonView.prototype.ondblclick = function(e){
-  console.log('double click');
+UserView.prototype.hide = function(){
+  // hide the view
+};
+
+UserView.prototype.destroy = function(){
+  // clean up anything you need to
+  this.events.unbind();
 };
 ```
 
-## API
-
-  See [component/event-manager](https://github.com/component/event-manager).
 
 ## License
 
