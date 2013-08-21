@@ -9,5 +9,9 @@
     "scripts": {
       "events/index.js": "index.js"
     }
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/component/events.git"
   }
 }
