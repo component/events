@@ -74,10 +74,12 @@ Events.prototype.bind = function(event, method){
   var method = method || 'on' + name;
   var args = [].slice.call(arguments, 2);
 
+  if ('function' != typeof method) method = obj[method];
+
   // callback
   function cb(){
     var a = [].slice.call(arguments).concat(args);
-    obj[method].apply(obj, a);
+    method.apply(obj, a);
   }
 
   // bind
