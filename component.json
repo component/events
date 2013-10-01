@@ -6,7 +6,7 @@
   "keywords": ["event", "events", "subscriptions"],
   "dependencies": {
     "component/event": "0.1.0",
-    "component/delegate": "0.1.0"
+    "component/delegate": "0.2.0"
   },
   "development": {},
   "license": "MIT",
