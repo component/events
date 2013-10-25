@@ -5,7 +5,7 @@
   "version": "1.0.4",
   "keywords": ["event", "events", "subscriptions"],
   "dependencies": {
-    "component/event": "0.1.0",
+    "component/event": "0.1.1",
     "component/delegate": "0.2.1"
   },
   "development": {},
