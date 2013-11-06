@@ -10,6 +10,10 @@
       "events/index.js": "index.js"
     }
   },
+  "browser": {
+    "delegate": "delegate-component",
+    "event": "event-component"
+  },  
   "repository": {
     "type": "git",
     "url": "https://github.com/component/events.git"
