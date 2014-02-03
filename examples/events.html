@@ -3,8 +3,8 @@
   <title>Events</title>
 </head>
 <body>
-  <button>Click me</button>
-  <button onclick="unbind()">Unbind</button>
+  <button id="click">Click me</button>
+  <button id="unbind" onclick="unbind()">Unbind</button>
   <script src="../build/build.js"></script>
   <script>
     var Events = require('events');
@@ -19,6 +19,7 @@
     events.bind('click');
 
     function unbind() {
+      alert('removed');
       events.unbind();
     }
   </script>

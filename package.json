@@ -13,9 +13,14 @@
   "browser": {
     "delegate": "delegate-component",
     "event": "event-component"
-  },  
+  },
   "repository": {
     "type": "git",
     "url": "https://github.com/component/events.git"
+  },
+  "devDependencies": {
+    "ecstatic": "~0.4.13",
+    "zombie": "~2.0.0-alpha25",
+    "mocha": "~1.17.1"
   }
 }
