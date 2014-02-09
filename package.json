@@ -1,6 +1,6 @@
 {
   "name": "events-component-2",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "dependencies": {
     "event-component": "0.1.0",
     "delegate-component": "0.1.0"
