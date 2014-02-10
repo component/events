@@ -107,6 +107,14 @@ events.unbind('click')
 events.unbind()
 ```
 
+## Running tests
+
+```
+$ npm i -g component-test
+$ make
+$ component-test browser
+```
+
 ## License
 
   MIT
