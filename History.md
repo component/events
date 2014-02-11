@@ -1,4 +1,10 @@
 
+1.0.6 / 2014-02-10
+==================
+
+  * package: rename to "component-events"
+  * component: update "event" to v0.1.3
+
 1.0.5 / 2014-01-22
 ==================
 
