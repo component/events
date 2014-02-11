@@ -2,18 +2,18 @@
 1.0.5 / 2014-01-22
 ==================
 
- * update deps
+  * update deps
 
 1.0.4 / 2013-07-28
 ==================
 
- * add delegation support and inline manager
+  * add delegation support and inline manager
 
 1.0.3 / 2013-05-27
 ==================
 
- * pin deps
- * rename for broken npm tooling
+  * pin deps
+  * rename for broken npm tooling
 
 1.0.2 / 2013-01-08
 ==================
