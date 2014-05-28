@@ -1,4 +1,9 @@
 
+1.0.7 / 2014-05-27
+==================
+
+  * component, package: update "component/delegate" to v0.2.2
+
 1.0.6 / 2014-02-10
 ==================
 
