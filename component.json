@@ -2,7 +2,7 @@
   "name": "events",
   "repo": "component/events",
   "description": "Higher level dom event management",
-  "version": "1.0.8",
+  "version": "1.0.9",
   "keywords": [
     "event",
     "events",
