@@ -10,7 +10,7 @@
   ],
   "dependencies": {
     "component/event": "0.1.4",
-    "component/delegate": "0.2.2"
+    "component/delegate": "0.2.3"
   },
   "development": {},
   "license": "MIT",
