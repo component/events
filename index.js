@@ -62,17 +62,18 @@ Events.prototype.sub = function(event, method, cb){
  *
  * @param {String} event
  * @param {String|function} [method]
+ * @param {Boolean} [capture]
  * @return {Function} callback
  * @api public
  */
 
-Events.prototype.bind = function(event, method){
+Events.prototype.bind = function(event, method, capture){
   var e = parse(event);
   var el = this.el;
   var obj = this.obj;
   var name = e.name;
   var method = method || 'on' + name;
-  var args = [].slice.call(arguments, 2);
+  var args = [].slice.call(arguments, 3);
 
   // callback
   function cb(){
@@ -82,9 +83,9 @@ Events.prototype.bind = function(event, method){
 
   // bind
   if (e.selector) {
-    cb = delegate.bind(el, e.selector, name, cb);
+    cb = delegate.bind(el, e.selector, name, cb, capture);
   } else {
-    events.bind(el, name, cb);
+    events.bind(el, name, cb, capture);
   }
 
   // subscription for unbinding
