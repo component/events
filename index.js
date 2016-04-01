@@ -3,8 +3,17 @@
  * Module dependencies.
  */
 
-var events = require('event');
-var delegate = require('delegate');
+try {
+  var events = require('event');
+} catch(err) {
+  var events = require('component-event');
+}
+
+try {
+  var delegate = require('delegate');
+} catch(err) {
+  var delegate = require('component-delegate');
+}
 
 /**
  * Expose `Events`.
