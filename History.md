@@ -1,4 +1,10 @@
 
+1.0.10 / 2014-04-01
+==================
+
+ * component, package: bump component-delegate dependency to 0.2.4
+ * index: Fall back to require('component-*') for node compat
+
 1.0.9 / 2014-08-01
 ==================
 

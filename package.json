@@ -1,6 +1,6 @@
 {
   "name": "component-events",
-  "version": "1.0.9",
+  "version": "1.0.10",
   "dependencies": {
     "component-event": "0.1.4",
     "component-delegate": "0.2.4"
