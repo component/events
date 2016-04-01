@@ -3,7 +3,7 @@
   "version": "1.0.9",
   "dependencies": {
     "component-event": "0.1.4",
-    "component-delegate": "0.2.3"
+    "component-delegate": "0.2.4"
   },
   "component": {
     "scripts": {
